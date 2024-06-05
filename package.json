@@ -21,7 +21,9 @@
 	"description": "A collection of React hooks to improve the quality of life of developers.",
 	"files": [
 		"dist",
-		"README.md"
+		"README.md",
+		"hooks.json",
+		"cli"
 	],
 	"bin": {
 		"qol-hooks": "./cli/index.js"
