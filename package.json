@@ -6,10 +6,20 @@
 	"scripts": {
 		"build": "rm -rf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
+	"keywords": [
+		"react",
+		"hooks",
+		"qol",
+		"quality",
+		"life"
+	],
+	"author": "andreasdelu",
+	"license": "MIT",
+	"description": "A collection of React hooks to improve the quality of life of developers.",
+	"files": [
+		"dist",
+		"README.md"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/esm/index.js",
