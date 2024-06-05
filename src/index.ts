@@ -4,6 +4,7 @@ export { default as useEventListener } from "./useEventListener";
 export { default as useFetch } from "./useFetch";
 export { default as useHover } from "./useHover";
 export { default as useInterval } from "./useInterval";
+export { default as useInView } from "./useInView";
 export { default as useKeyPress } from "./useKeyPress";
 export { default as useLocalStorage } from "./useLocalStorage";
 export { default as useOnClickOutside } from "./useOnClickOutside";

@@ -30,6 +30,7 @@ yarn add qol-hooks
 - [useFetch](#usefetch)
 - [useHover](#usehover)
 - [useInterval](#useinterval)
+- [useInView](#useinview)
 - [useKeyPress](#usekeypress)
 - [useLocalStorage](#uselocalstorage)
 - [useOnClickOutside](#useonclickoutside)
@@ -167,6 +168,27 @@ const Component = () => {
 	}, 1000);
 
 	return <div>Check the console!</div>;
+};
+```
+
+## useInView
+
+A hook that detects whether an element is in view.
+
+### Usage
+
+```jsx
+import { useInView } from "qol-hooks";
+
+const Component = () => {
+	const [ref, inView] = useInView();
+
+	return (
+		<div ref={ref}>
+			{inView ? "In view" : "Not in view"}
+			<div style={{ height: "100vh" }}></div>
+		</div>
+	);
 };
 ```
 
