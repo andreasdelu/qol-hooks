@@ -3,6 +3,7 @@
 	"version": "1.0.3",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"type": "module",
 	"scripts": {
 		"build:cjs": "tsc --project tsconfig.cjs.json",
 		"build:esm": "tsc --project tsconfig.esm.json",
@@ -22,6 +23,9 @@
 		"dist",
 		"README.md"
 	],
+	"bin": {
+		"qol-hooks": "./cli/index.js"
+	},
 	"exports": {
 		".": {
 			"import": "./dist/esm/index.js",
@@ -36,6 +40,7 @@
 	"devDependencies": {
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
+		"inquirer": "^9.2.23",
 		"typescript": "^5.4.5"
 	},
 	"dependencies": {

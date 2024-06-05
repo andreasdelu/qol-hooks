@@ -2,3 +2,5 @@ src/
 tsconfig.json
 tsconfig.esm.json
 tsconfig.cjs.json
+qol-hooks.config.json
+utils/
