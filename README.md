@@ -1,6 +1,8 @@
 # QOL Hooks
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/qol-hooks.svg)](https://www.npmjs.com/package/qol-hooks)
+[![npm downloads](https://img.shields.io/npm/dt/qol-hooks.svg)](https://www.npmjs.com/package/qol-hooks)
 
 ## Description
 
