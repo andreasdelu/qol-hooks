@@ -1,0 +1,33 @@
+{
+	"name": "qol-hooks",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "rm -rf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js",
+			"types": "./dist/esm/index.d.ts"
+		}
+	},
+	"peerDependencies": {
+		"react": "^17.0.0 || ^18.0.0",
+		"react-dom": "^17.0.0 || ^18.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"react": "^17.0.0 || ^18.0.0",
+		"react-dom": "^17.0.0 || ^18.0.0"
+	}
+}
