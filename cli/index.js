@@ -32,7 +32,7 @@ async function installHook(hookName) {
 		process.exit(1);
 	}
 
-	const sourcePath = path.resolve(__dirname, "src", hookPath);
+	const sourcePath = path.resolve(__dirname, "../src", hookPath);
 	const destPath = path.resolve(process.cwd(), destination);
 
 	//Check if hook already exists
