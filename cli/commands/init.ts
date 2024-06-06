@@ -56,6 +56,31 @@ async function init(): Promise<void> {
 
 	console.log(`Hooks folder set to "${folder}"`);
 	console.log(color("green", "QOL Hooks initialized!\n"));
+
+	// Check if project has react installed
+	const packageJsonPath = path.resolve(process.cwd(), "package.json");
+	if (!fs.existsSync(packageJsonPath)) {
+		console.error(
+			color(
+				"red",
+				"React is not installed - QOL Hooks requires React to be work properly.\n"
+			)
+		);
+		process.exit(1);
+	}
+
+	const packageJson = JSON.parse(
+		fs.readFileSync(packageJsonPath, { encoding: "utf-8" })
+	);
+	if (!packageJson.dependencies["react"]) {
+		console.error(
+			color(
+				"red",
+				"React is not installed - QOL Hooks requires React to be work properly.\n"
+			)
+		);
+		process.exit(1);
+	}
 }
 
 export default init;
