@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["DOM", "ES6", "ES2017"],
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"declaration": true,
+		"outDir": "./dist/cli"
+	},
+	"include": ["cli/**/*.ts"]
+}

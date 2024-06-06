@@ -7,7 +7,10 @@
 	"scripts": {
 		"build:cjs": "tsc --project tsconfig.cjs.json",
 		"build:esm": "tsc --project tsconfig.esm.json",
-		"build": "rm -rf dist && npm run build:cjs && npm run build:esm"
+		"build:ts": "mkdir -p ./dist/ts && cp -r ./src/* ./dist/ts",
+		"build:cli": "tsc --project tsconfig.cli.json",
+		"build": "rm -rf dist && npm run build:ts && npm run build:cli && npm run build:cjs && npm run build:esm && npm run generate-hooks",
+		"generate-hooks": "node ./utils/generateHooksList.js"
 	},
 	"keywords": [
 		"react",
@@ -21,12 +24,10 @@
 	"description": "A collection of React hooks to improve the quality of life of developers.",
 	"files": [
 		"dist",
-		"README.md",
-		"hooks.json",
-		"cli"
+		"README.md"
 	],
 	"bin": {
-		"qol-hooks": "./cli/index.js"
+		"qol-hooks": "./dist/cli/index.js"
 	},
 	"exports": {
 		".": {
@@ -40,13 +41,15 @@
 		"react-dom": "^17.0.0 || ^18.0.0"
 	},
 	"devDependencies": {
+		"@types/inquirer": "^9.0.7",
+		"@types/node": "^20.14.2",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"typescript": "^5.4.5"
 	},
 	"dependencies": {
+		"inquirer": "^9.2.23",
 		"react": "^17.0.0 || ^18.0.0",
-		"react-dom": "^17.0.0 || ^18.0.0",
-		"inquirer": "^9.2.23"
+		"react-dom": "^17.0.0 || ^18.0.0"
 	}
 }
