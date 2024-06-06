@@ -54,7 +54,7 @@ async function init(): Promise<void> {
 
 	fs.writeFileSync(CONFIG.configPath, JSON.stringify(config, null, 2));
 
-	console.log(`Hooks folder set to "${folder}"`);
+	console.log(`\nHooks folder set to "${folder}"`);
 	console.log(color("green", "QOL Hooks initialized!\n"));
 
 	// Check if project has react installed
@@ -63,7 +63,7 @@ async function init(): Promise<void> {
 		console.error(
 			color(
 				"yellow",
-				"WARNING: React is not installed - QOL Hooks requires React to be work properly.\n"
+				"WARNING: React is not installed - QOL Hooks requires React to work properly.\n"
 			)
 		);
 		process.exit(1);
@@ -76,7 +76,7 @@ async function init(): Promise<void> {
 		console.error(
 			color(
 				"yellow",
-				"WARNING: React is not installed - QOL Hooks requires React to be work properly.\n"
+				"WARNING: React is not installed - QOL Hooks requires React to work properly.\n"
 			)
 		);
 		process.exit(1);
