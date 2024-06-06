@@ -62,8 +62,8 @@ async function init(): Promise<void> {
 	if (!fs.existsSync(packageJsonPath)) {
 		console.error(
 			color(
-				"red",
-				"React is not installed - QOL Hooks requires React to be work properly.\n"
+				"yellow",
+				"WARNING: React is not installed - QOL Hooks requires React to be work properly.\n"
 			)
 		);
 		process.exit(1);
@@ -75,8 +75,8 @@ async function init(): Promise<void> {
 	if (!packageJson?.dependencies?.["react"]) {
 		console.error(
 			color(
-				"red",
-				"React is not installed - QOL Hooks requires React to be work properly.\n"
+				"yellow",
+				"WARNING: React is not installed - QOL Hooks requires React to be work properly.\n"
 			)
 		);
 		process.exit(1);
