@@ -4,3 +4,5 @@ tsconfig.esm.json
 tsconfig.cjs.json
 qol-hooks.config.json
 utils/
+cli/
+node_modules/
