@@ -50,7 +50,6 @@ async function init(): Promise<void> {
 	const config = {
 		folder: folder,
 		language: language.toLowerCase(),
-		installedHooks: [],
 	};
 
 	fs.writeFileSync(CONFIG.configPath, JSON.stringify(config, null, 2));
