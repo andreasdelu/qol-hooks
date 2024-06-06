@@ -2,15 +2,18 @@
 
 import fs, { constants } from "fs";
 import path from "path";
-const __dirname = path.resolve();
 import inquirer from "inquirer";
 
 import hooks from "../hooks.json" assert { type: "json" };
+import { fileURLToPath } from "url";
 
 if (hooks === undefined || hooks === null || typeof hooks !== "object") {
 	console.error("hooks.json not found or invalid.");
 	process.exit(1);
 }
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const HOOKS_CONFIG_PATH = path.resolve(process.cwd(), "qol-hooks.config.json");
 
