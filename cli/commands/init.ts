@@ -72,7 +72,7 @@ async function init(): Promise<void> {
 	const packageJson = JSON.parse(
 		fs.readFileSync(packageJsonPath, { encoding: "utf-8" })
 	);
-	if (!packageJson.dependencies["react"]) {
+	if (!packageJson?.dependencies?.["react"]) {
 		console.error(
 			color(
 				"red",
