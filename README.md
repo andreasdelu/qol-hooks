@@ -6,20 +6,28 @@
 
 ## Description
 
+(Qaulity of Life)
+
 QOL Hooks is a collection of useful hooks for enhancing the quality of life in your React applications. These hooks provide common functionalities that can be easily integrated into your projects.
 
 ## Installation
 
-To install QOL Hooks, run:
+To initialize QOL Hooks, run:
 
 ```bash
-npm install qol-hooks
+npx qol-hooks init
 ```
 
-or if you're using yarn:
+Then install whatever hooks you need:
 
 ```bash
-yarn add qol-hooks
+npx qol-hooks install useClipboard
+```
+
+Or just install all of them:
+
+```bash
+npx qol-hooks install all
 ```
 
 ## Available Hooks
