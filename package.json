@@ -9,8 +9,9 @@
 		"build:esm": "tsc --project tsconfig.esm.json",
 		"build:ts": "mkdir -p ./dist/ts && cp -r ./src/* ./dist/ts",
 		"build:cli": "tsc --project tsconfig.cli.json",
-		"build": "rm -rf dist && npm run build:ts && npm run build:cli && npm run build:esm && npm run generate-hooks",
-		"generate-hooks": "node ./utils/generateHooksList.js"
+		"build": "rm -rf dist && npm run build:ts && npm run build:cli && npm run build:esm && npm run generate-hooks && npm run update-readme-hooks",
+		"generate-hooks": "node ./utils/generateHooksList.js",
+		"update-readme-hooks": "node ./utils/updateReadmeHooks.js"
 	},
 	"keywords": [
 		"react",
