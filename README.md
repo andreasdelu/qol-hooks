@@ -4,6 +4,10 @@
 [![npm version](https://img.shields.io/npm/v/qol-hooks.svg)](https://www.npmjs.com/package/qol-hooks)
 [![npm downloads](https://img.shields.io/npm/dt/qol-hooks.svg)](https://www.npmjs.com/package/qol-hooks)
 
+<!-- hook amount badge start -->
+![Static Badge](https://img.shields.io/badge/hooks-17-D368FF)
+<!-- hook amount badge end -->
+
 ## Description
 
 (Qaulity of Life)
@@ -47,7 +51,6 @@ npx qol-hooks help
 ## Available Hooks
 
 <!-- hooks starts -->
-
 - useClipboard
 - useDebounce
 - useEventListener
