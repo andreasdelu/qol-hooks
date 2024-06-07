@@ -21,10 +21,8 @@ async function updateReadmeHooks() {
 	);
 
 	const updatedReadmeBadge = updatedReadme.replace(
-		/<!-- hook amount badge start -->[\s\S]*<!-- hook amount badge end -->/,
-		`<!-- hook amount badge start -->![Static Badge](https://img.shields.io/badge/hooks-${
-			hooks.split("\n").length
-		}-D368FF)\n<!-- hook amount badge end -->`
+		/hooks-[\s\S]*-D368FF/,
+		`hooks-${hooks.split("\n").length}-D368FF`
 	);
 	fs.writeFile(path.join(__dirname, "README.md"), updatedReadmeBadge);
 }
